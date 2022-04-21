@@ -6,45 +6,48 @@
 //
 
 import Spring
+import Darwin
 
 class ViewController: UIViewController {
 
     @IBOutlet var ourView: SpringView!
+    @IBOutlet var preset: UILabel!
+    @IBOutlet var buttonNextAnimate: SpringButton!
     
+    var animate = Animation.getAnimations()
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        ourView.isHidden = true
-        // Do any additional setup after loading the view.
+        ourView.layer.cornerRadius = ourView.frame.height / 5
+        buttonNextAnimate.layer.cornerRadius = buttonNextAnimate.frame.height / 2
+        buttonNextAnimate.setTitle("\(animate.preset)", for: .normal)
     }
-
-    @IBAction func ourButton(_ sender: SpringButton) {
-        if ourView.isHidden {
-            
-        ourView.isHidden = false
-        ourView.animation = "fadeIn"
-        ourView.curve = "easeIn"
-        ourView.duration = 2.1
-        ourView.animate()
-            
-        } else {
-           
-            ourView.animation = "fadeOut"
-            ourView.curve = "easeIn"
-            ourView.duration = 1.0
-            ourView.damping = 1.0
-        ourView.velocity = 0.5
-            ourView.animate()
-         
-        let color = CIColor(color: ourView.backgroundColor!)
-        let number = color.alpha
-            print("Значение альфа = \(number)")
-        if number == 0 {
-            ourView.isHidden = false
-            print("Значение альфа = \(number)")
-        }
-        }
     
-   
-      
-}
+    
+    @IBAction func PressedButtonNextAnimate(_ sender: SpringButton) {
+       // Settings animation for the button
+        sender.animation = "pop"
+        sender.force = 0.1
+        sender.animate()
+        
+        // Settings animation for the main view
+        ourView.animation = animate.preset
+        ourView.curve = animate.curve
+        ourView.force = animate.force
+        ourView.duration = animate.duration
+        ourView.delay = animate.delay
+        ourView.animate()
+        
+        preset.text = """
+Present - \(animate.preset)
+Curve: - \(animate.curve)
+Force: - \(String(format: "%.2f", (animate.force)))
+Duration: - \(String(format: "%.2f", (animate.duration)))
+Delay: - \(String(format: "%.2f", (animate.delay)))
+"""
+        
+        animate = Animation.getAnimations()
+        sender.setTitle("\(animate.preset)", for: .normal)
+    }
+    
 }

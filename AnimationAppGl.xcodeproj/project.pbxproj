@@ -14,6 +14,8 @@
 		0403B64A280F434300B1580B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0403B649280F434300B1580B /* Assets.xcassets */; };
 		0403B64D280F434300B1580B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0403B64B280F434300B1580B /* LaunchScreen.storyboard */; };
 		0403B655280F464800B1580B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0403B654280F464800B1580B /* .gitignore */; };
+		04B42AE428100DC9000858CB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B42AE328100DC9000858CB /* Model.swift */; };
+		04B42AE8281014D7000858CB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B42AE7281014D7000858CB /* Data.swift */; };
 		91E1D1E5F89FA91E0C59EFBC /* Pods_AnimationAppGl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF26B6DE93C8BF730BF3740C /* Pods_AnimationAppGl.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,8 @@
 		0403B64C280F434300B1580B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0403B64E280F434300B1580B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0403B654280F464800B1580B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		04B42AE328100DC9000858CB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		04B42AE7281014D7000858CB /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		4478F16133FCF6EEB93C0D9A /* Pods-AnimationAppGl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationAppGl.debug.xcconfig"; path = "Target Support Files/Pods-AnimationAppGl/Pods-AnimationAppGl.debug.xcconfig"; sourceTree = "<group>"; };
 		DF26B6DE93C8BF730BF3740C /* Pods_AnimationAppGl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimationAppGl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2860E72FDBB5D1C69D9CF1B /* Pods-AnimationAppGl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationAppGl.release.xcconfig"; path = "Target Support Files/Pods-AnimationAppGl/Pods-AnimationAppGl.release.xcconfig"; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 				04B42AE028100BFA000858CB /* Controllers */,
 				04B42ADF28100A7A000858CB /* View */,
 				0403B649280F434300B1580B /* Assets.xcassets */,
+				04B42AE7281014D7000858CB /* Data.swift */,
 			);
 			path = AnimationAppGl;
 			sourceTree = "<group>";
@@ -95,6 +100,7 @@
 		04B42AE128100C1D000858CB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				04B42AE328100DC9000858CB /* Model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -243,6 +249,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0403B645280F434200B1580B /* ViewController.swift in Sources */,
+				04B42AE8281014D7000858CB /* Data.swift in Sources */,
+				04B42AE428100DC9000858CB /* Model.swift in Sources */,
 				0403B641280F434200B1580B /* AppDelegate.swift in Sources */,
 				0403B643280F434200B1580B /* SceneDelegate.swift in Sources */,
 			);
